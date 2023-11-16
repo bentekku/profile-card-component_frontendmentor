@@ -23,9 +23,14 @@ $weight-bold: 700;
 
 body {
   height: 100vh;
+  padding: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  height: 100%;
+.card {
+  height: 500px;
   width: 100%;
 }
