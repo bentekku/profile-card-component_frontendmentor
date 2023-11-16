@@ -1,40 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-//// VARIABLES
-/// Colors
-// Primary
-$dark-cyan: hsl(185, 75%, 39%);
-$very-dark-desaturated-blue: hsl(229, 23%, 23%);
-$dark-grayish-blue: hsl(227, 10%, 46%);
-$dark-grayish-blue-alpha: hsla(227, 10%, 46%, 0.2);
-// Neutral
-$dark-gray: hsl(0, 0%, 59%);
-/// Typography
-// Body
-$font-size: 18px; //name and stats
-$weight-normal: 400;
-$weight-bold: 700;
-/// Animation
-$animation-duration: 1.25s;
-
 body {
   height: 100vh;
   width: 100%;
   padding: 16px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-  background-color: $dark-cyan;
-
+  background-color: hsl(185, 75%, 39%);
   font-family: "Kumbh Sans", sans-serif;
 }
 
@@ -42,29 +21,22 @@ body {
   position: fixed;
   left: 0;
   top: 0;
-
-  // outline: 1px solid red;
-
   background-image: url("./images/bg-pattern-top.svg");
   background-repeat: no-repeat;
-
-  object-fit: contain;
-
-  transition: all $animation-duration ease-out;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 1.25s ease-out;
 }
+
 .pattern-bottom-right {
   position: fixed;
   right: 0;
   bottom: 0;
-
-  // outline: 1px solid red;
-
   background-image: url("./images/bg-pattern-bottom.svg");
   background-repeat: no-repeat;
-
-  object-fit: contain;
-
-  transition: all $animation-duration ease-out;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transition: all 1.25s ease-out;
 }
 
 .attribution {
@@ -72,24 +44,19 @@ body {
   bottom: 25px;
   left: 0;
   right: 0;
-
   font-size: 14px;
-
   width: 40%;
-
   z-index: 3;
-  background-color: $very-dark-desaturated-blue;
-  color: $dark-cyan;
+  background-color: hsl(229, 23%, 23%);
+  color: hsl(185, 75%, 39%);
   padding: 8px;
-
   position: fixed;
   transform: translate(75%, -8%);
   border-radius: 16px;
-
-  a,
-  a:visited {
-    color: orange;
-  }
+}
+.attribution a,
+.attribution a:visited {
+  color: orange;
 }
 
 .card {
@@ -97,61 +64,52 @@ body {
   flex-direction: column;
   z-index: 2;
   background-color: white;
-
   height: 390px;
   width: 343px;
-
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-
-  h1 {
-    color: $very-dark-desaturated-blue;
-    font-size: $font-size;
-    font-weight: $weight-bold;
-    span {
-      color: $dark-gray;
-    }
-  }
-  p {
-    color: $dark-gray;
-  }
-
-  .usr {
-    padding: 12px;
-    padding-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin-top: -60px;
-
-    border-bottom: 1px solid $dark-grayish-blue-alpha;
-
-    img {
-      border-radius: 50%;
-      border: 6px solid white;
-    }
-  }
-
-  .stats {
-    padding: 12px 32px;
-
-    display: flex;
-    margin: auto 0;
-    justify-content: space-between;
-    align-items: center;
-
-    .followers {
-      text-align: center;
-    }
-    .likes {
-      text-align: center;
-    }
-    .photos {
-      text-align: center;
-    }
-  }
+}
+.card h1 {
+  color: hsl(229, 23%, 23%);
+  font-size: 18px;
+  font-weight: 700;
+}
+.card h1 span {
+  color: hsl(0, 0%, 59%);
+}
+.card p {
+  color: hsl(0, 0%, 59%);
+}
+.card .usr {
+  padding: 12px;
+  padding-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: -60px;
+  border-bottom: 1px solid hsla(227, 10%, 46%, 0.2);
+}
+.card .usr img {
+  border-radius: 50%;
+  border: 6px solid white;
+}
+.card .stats {
+  padding: 12px 32px;
+  display: flex;
+  margin: auto 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .stats .followers {
+  text-align: center;
+}
+.card .stats .likes {
+  text-align: center;
+}
+.card .stats .photos {
+  text-align: center;
 }
 
 @media screen and (max-width: 991px) {
@@ -173,7 +131,6 @@ body {
     display: none;
   }
 }
-
 @media screen and (min-width: 992px) {
   .pattern-top-left {
     height: 60%;
@@ -185,4 +142,4 @@ body {
     width: 75%;
     transform: translateX(25%) scaleX(1);
   }
-}
+}/*# sourceMappingURL=main.css.map */
