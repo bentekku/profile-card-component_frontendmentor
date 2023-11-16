@@ -142,4 +142,16 @@ body {
     width: 75%;
     transform: translateX(25%) scaleX(1);
   }
+}
+@media screen and (min-width: 1491px) {
+  .pattern-top-left {
+    height: 60%;
+    width: 100%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+  .pattern-bottom-right {
+    height: 60%;
+    width: 75%;
+    transform: translateX(39%) scaleX(1);
+  }
 }/*# sourceMappingURL=main.css.map */
